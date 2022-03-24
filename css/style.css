@@ -17,10 +17,11 @@ header {
 }
 
 .results {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    width: 60%;
-    border: solid white 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 50vw;
    
 }
 
@@ -29,3 +30,12 @@ img {
     max-height: 200px;
 }
 
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    border: dotted blue 4px;
+    height: 400px;
+    width: 250px;
+}
