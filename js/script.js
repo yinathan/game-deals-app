@@ -21,6 +21,8 @@ $button.on("click", () => {
         $img.appendTo($div)
         // $(".results").append(`<div class = "item"></div>`);
         $(".results").append($div)
+        let $price = data[i].cheapest
+        $div.append(`Price: ${$price}`)
         
     }
 
