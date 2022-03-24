@@ -32,10 +32,19 @@ img {
 
 .item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-flow: column nowrap;
     border: dotted blue 4px;
     height: 400px;
     width: 250px;
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+.item>img {
+    width: 200px;
 }

@@ -14,7 +14,8 @@ $button.on("click", () => {
         const $div = $("<div></div>")
         $div.attr('class', 'item')
         let $gameName = data[i].external;
-        $div.html(`${data[i].external}`);
+        const $title = $(`<h2>${$gameName}</h2>`)
+        $div.append($title)
         let $img = $(`<img id = "thumbnail${i}">`)
         $img.attr('src',data[i].thumb)
         $img.appendTo($div)
