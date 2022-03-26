@@ -11,14 +11,14 @@ $button.on("click", () => {
     // let $img = $('<img id = "thumbnail">')
     // $img.attr('src',data[0].thumb)
     // $img.appendTo(".results")
-    for (let i = 0; i <= data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         const $div = $("<div class = 'item flip-card'></div>")
         $(".results").append($div)
         const $divInner = $('<div class = "flip-card-inner"></div>')
         $div.append($divInner)
         // front side of card
         const $divFront = $("<div class = 'flip-card-front'></div>")
-        $divInner.append($divFront)
+        $divFront.appendTo($divInner)
         let $gameName = data[i].title;
         // console.log($gameName)
         let $gameTitle = $(`<h2>${$gameName}</h2>`)
@@ -28,12 +28,16 @@ $button.on("click", () => {
         $divFront.append($img)
         // $(".results").append(`<div class = "item"></div>`);
         //back side of card
-        const $divBack = $('<div class = "flip-card back"></div>') 
-        $divInner.append($divBack)
+        const $divBack = $('<div class = "flip-card-back"></div>') 
+        $divBack.appendTo($divInner)
         let $price = data[i].normalPrice
-        $divBack.append(`Retail Price: ${$price}`)
+        $divBack.append(
+          `<h4><i class="fa-solid fa-dollar-sign"></i> Retail Price: ${$price}</h4>`
+        );
         let $review = data[i].steamRatingText
-        $divBack.append(`<br />Steam Rating: ${$review}`)
+        $divBack.append(
+          `<p><i class="fa-solid fa-star-sharp"></i> Steam Rating: ${$review}</p>`
+        );
         
     }
 
