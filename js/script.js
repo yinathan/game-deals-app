@@ -4,25 +4,36 @@ const $button = $('button')
 $button.on("click", () => {
   const gameName = $input.val()
   $.ajax(
-    `https://www.cheapshark.com/api/1.0/games?title=${gameName}&limit=20&exact=0`
+    `https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${gameName}`
+    // `https://www.cheapshark.com/api/1.0/games?title=${gameName}&limit=20&exact=0`
   ).then((data) => {
     console.log(data);
     // let $img = $('<img id = "thumbnail">')
     // $img.attr('src',data[0].thumb)
     // $img.appendTo(".results")
     for (let i = 0; i <= data.length; i++) {
-        const $div = $("<div></div>")
-        $div.attr('class', 'item')
-        let $gameName = data[i].external;
-        const $title = $(`<h2>${$gameName}</h2>`)
-        $div.append($title)
-        let $img = $(`<img id = "thumbnail${i}">`)
-        $img.attr('src',data[i].thumb)
-        $img.appendTo($div)
-        // $(".results").append(`<div class = "item"></div>`);
+        const $div = $("<div class = 'item flip-card'></div>")
         $(".results").append($div)
-        let $price = data[i].cheapest
-        $div.append(`Price: ${$price}`)
+        const $divInner = $('<div class = "flip-card-inner"></div>')
+        $div.append($divInner)
+        // front side of card
+        const $divFront = $("<div class = 'flip-card-front'></div>")
+        $divInner.append($divFront)
+        let $gameName = data[i].title;
+        // console.log($gameName)
+        let $gameTitle = $(`<h2>${$gameName}</h2>`)
+        $divFront.append($gameTitle)
+        let $img = $(`<img id = "thumbnail">`)
+        $img.attr('src',data[i].thumb)
+        $divFront.append($img)
+        // $(".results").append(`<div class = "item"></div>`);
+        //back side of card
+        const $divBack = $('<div class = "flip-card back"></div>') 
+        $divInner.append($divBack)
+        let $price = data[i].normalPrice
+        $divBack.append(`Retail Price: ${$price}`)
+        let $review = data[i].steamRatingText
+        $divBack.append(`<br />Steam Rating: ${$review}`)
         
     }
 
