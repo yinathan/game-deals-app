@@ -5,6 +5,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000 ;
+
+}
+
+input {
+  height: 30px;
+  width: 300px;
+}
+
+button {
+  height: 30px;
 }
 
 h1{
@@ -57,6 +68,7 @@ h2 {
   height: 300px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: 10px;
 }
 
 /* This container is needed to position the front and back side */
@@ -87,7 +99,21 @@ h2 {
 .flip-card-front {
   background-color: #bbb;
   color: orange;
-    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000 ;
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000 ;
+  
+}
+.results .flip-card .flip-card-inner .flip-card-front p {
+  font-size: 25px;
+  margin: 5px;
+  text-align: left;
+  
+}
+
+.results .flip-card .flip-card-inner .flip-card-front h4 {
+  font-size: 25px;
+  margin: 5px;
+  text-align: left;
+
 }
 
 /* Style the back side */
@@ -106,6 +132,8 @@ h2 {
 .results .flip-card .flip-card-inner .flip-card-front #thumbnail {
     max-width: 200px;
     max-height: 150px;
+    min-width: 60%;
+
 
     
 }

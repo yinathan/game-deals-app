@@ -7,6 +7,7 @@ $button.on("click", () => {
     `https://www.cheapshark.com/api/1.0/deals?storeID=1&title=${gameName}`
     // `https://www.cheapshark.com/api/1.0/games?title=${gameName}&limit=20&exact=0`
   ).then((data) => {
+    $(".results").empty()
     console.log(data);
     // let $img = $('<img id = "thumbnail">')
     // $img.attr('src',data[0].thumb)
