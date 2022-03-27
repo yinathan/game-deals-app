@@ -45,7 +45,8 @@ $divBack.appendTo($divInner);
         `https://www.cheapshark.com/api/1.0/deals?id=${$cheapestUrl}`
       ).then((newData) => {
         $cheapStore = newData.cheaperStores[0]
-        // console.log($cheapStore)
+        console.log($cheapStore)
+        console.log(newData)
         let $salePrice = $cheapStore.salePrice
         let $storeID = $cheapStore.storeID
         $divBack.append(
