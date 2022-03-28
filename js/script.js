@@ -36,7 +36,7 @@ $divBack.appendTo($divInner);
       );
       let $review = data[i].steamRatingText;
       $divFront.append(
-        `<p><i class="fa-solid fa-star-sharp"></i> Steam Rating: ${$review}</p>`
+        `<p></i> Steam Rating: ${$review}</p>`
       );
       //back side of card
       
@@ -56,7 +56,7 @@ $divBack.appendTo($divInner);
         $.ajax(`https://www.cheapshark.com/api/1.0/stores`
         ).then((storeData) => {
           for (let element of storeData) {
-
+            console.log($storeID)
             if (element.storeID === $storeID) {
               let $storeName = element.storeName
               $divBack.prepend(`<h3>Store Name: ${$storeName}</h3>`)
@@ -64,7 +64,7 @@ $divBack.appendTo($divInner);
               $divBack.append(
                 `<img src = https://www.cheapshark.com/${element.images.logo}>`
               );
-            }
+            } 
         
         }
           
