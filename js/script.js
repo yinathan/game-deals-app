@@ -59,8 +59,7 @@ $divBack.appendTo($divInner);
             console.log($storeID)
             if (element.storeID === $storeID) {
               let $storeName = element.storeName
-              $divBack.prepend(`<h3>Store Name: ${$storeName}</h3>`)
-              let $storeThumb = element.images.logo
+              $divBack.prepend(`<h3>Store Name: ${$storeName}</h3>`)              
               $divBack.append(
                 `<img src = https://www.cheapshark.com/${element.images.logo}>`
               );
