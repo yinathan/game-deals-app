@@ -13,14 +13,6 @@
 
 ---
 
-### Problem Being Solved and Target Market
-
-Use this area to explain what problem your app is solving, and who are the people who have this problem.
-
-### User Stories
-+ User should be able to see site on desktop and mobile devices
-+ Users can bla bla
-+ users can bla bla
 
 ### Technologies Used
 + HTML5
@@ -33,11 +25,18 @@ Use this area to explain what problem your app is solving, and who are the peopl
 ---
 
 ### Screenshots
-
+![Title](title.png)
+![giant](giantscreenshot.png)
 
 
 ---
 
 ### Getting Started
 
+[Click here](https://www.game-sale-deals.netlify.app) to search for deals on your favorite games now!
+Type in the name of a game on steam and hover over the box to show which store has a lower price for that game and how much they sell it for! 
+Happy saving!
+
 ### Future Enhancements
+
+I hope to add a wider range of stores to search for, which will increase how many games the user is able to search for. Also, currently the search function will run the API many times (depending on how many games are searched) and will eventually give the user a CORS error. The timer on this is usually around 60 minutes and the user will be able to search again. 
