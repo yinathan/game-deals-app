@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
     background-color: lightblue;
     color: orange;
@@ -6,15 +8,28 @@ body {
     align-items: center;
     flex-direction: column;
     text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000 ;
+    font-family: 'Open Sans', sans-serif;
+
 
 }
-
+i.fa-solid {
+  position: relative;
+  top: .04331em;
+}
 .title {
   font-size: 80px;
-  margin-top: 100px;
+  margin-top: 75px;
   
 }
+.search {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 
 
+
+}
 input {
   height: 40px;
   width: 500px;
@@ -26,9 +41,9 @@ input {
 
 button {
   font-size:33px;
-  background-color: transparent;
-  position: absolute;
+  background-color: beige;
   border: none;
+  
 } 
 
 h1{
@@ -54,7 +69,7 @@ header {
     align-items: center;
     flex-flow: row wrap;
     width: 1300px;
-   padding: 80px;
+    padding: 80px;
 }
 
 
