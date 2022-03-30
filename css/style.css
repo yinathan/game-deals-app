@@ -124,7 +124,7 @@ h2 {
 .results .flip-card .flip-card-inner .flip-card-front h4 {
   font-size: 25px;
   text-align: center;
-
+  margin: 0;
 }
 .results .flip-card .flip-card-inner .flip-card-front h2 {
   font-size: 25px;
