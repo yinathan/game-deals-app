@@ -130,18 +130,18 @@ h2 {
   
 }
 .results .flip-card .flip-card-inner .flip-card-front p {
-  font-size: 25px;
+  font-size: 20px;
   margin: 5px;
   text-align: center;
 }
 
 .results .flip-card .flip-card-inner .flip-card-front h4 {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   margin: 0;
 }
 .results .flip-card .flip-card-inner .flip-card-front h2 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .flip-card-back {
