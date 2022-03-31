@@ -139,6 +139,7 @@ h2 {
   font-size: 20px;
   text-align: center;
   margin: 0;
+  padding-bottom: 5px;
 }
 .results .flip-card .flip-card-inner .flip-card-front h2 {
   font-size: 20px;
